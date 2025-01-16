@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -14,13 +15,13 @@ func SendCodeHandler(w http.ResponseWriter, r *http.Request) {
 	phone := r.Form.Get("phoneNumber")
 
 	if appId == "" || appHash == "" || phone == "" {
-		http.Error(w, "appId, appHash and phoneNumber are required", http.StatusBadRequest)
+		http.Error(w, `{"error":"appId, appHash and phoneNumber are required"}`, http.StatusBadRequest)
 		return
 	}
 
 	appIdInt, err := strconv.Atoi(appId)
 	if err != nil {
-		http.Error(w, "appId must be an integer", http.StatusBadRequest)
+		http.Error(w, `{"error":"appId must be a number"}`, http.StatusBadRequest)
 		return
 	}
 
@@ -31,13 +32,21 @@ func SendCodeHandler(w http.ResponseWriter, r *http.Request) {
 	})
 
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		http.Error(w, fmt.Sprintf(`{"error":"%s"}`, err.Error()), http.StatusInternalServerError)
 		return
 	}
 
 	err = client.Connect()
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		http.Error(w, fmt.Sprintf(`{"error":"%s"}`, err.Error()), http.StatusInternalServerError)
 		return
 	}
+
+	hash, err := client.SendCode(phone)
+	if err != nil {
+		http.Error(w, fmt.Sprintf(`{"error":"%s"}`, err.Error()), http.StatusInternalServerError)
+		return
+	}
+
+	w.Write([]byte(`{"hash":"` + hash + `"}`))
 }
