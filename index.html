@@ -1,0 +1,2456 @@
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-generated website">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+
+    <!-- Performance optimization: Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        as="style">
+
+    <!-- {headerScripts} -->
+
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f8f8f8',
+                            100: '#e8e8e8',
+                            200: '#d3d3d3',
+                            300: '#a3a3a3',
+                            400: '#737373',
+                            500: '#525252',
+                            600: '#404040',
+                            700: '#262626',
+                            800: '#171717',
+                            900: '#0a0a0a',
+                            950: '#030303',
+                        },
+                        secondary: {
+                            50: '#f8f8f8',
+                            100: '#e8e8e8',
+                            200: '#d3d3d3',
+                            300: '#a3a3a3',
+                            400: '#737373',
+                            500: '#525252',
+                            600: '#404040',
+                            700: '#262626',
+                            800: '#171717',
+                            900: '#0a0a0a',
+                            950: '#030303',
+                        },
+                        accent: {
+                            50: '#f8f8f8',
+                            100: '#e8e8e8',
+                            200: '#d3d3d3',
+                            300: '#a3a3a3',
+                            400: '#737373',
+                            500: '#525252',
+                            600: '#404040',
+                            700: '#262626',
+                            800: '#171717',
+                            900: '#0a0a0a',
+                            950: '#030303',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                        '30': '7.5rem',
+                    },
+                    maxWidth: {
+                        '8xl': '88rem',
+                        '9xl': '96rem',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in',
+                        'fade-out': 'fadeOut 0.5s ease-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'slide-down': 'slideDown 0.5s ease-out',
+                        'slide-left': 'slideLeft 0.5s ease-out',
+                        'slide-right': 'slideRight 0.5s ease-out',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                        'scale-out': 'scaleOut 0.5s ease-out',
+                        'spin-slow': 'spin 3s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeOut: {
+                            '0%': { opacity: '1' },
+                            '100%': { opacity: '0' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideLeft: {
+                            '0%': { transform: 'translateX(20px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        slideRight: {
+                            '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        scaleOut: {
+                            '0%': { transform: 'scale(1.1)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                    },
+                    aspectRatio: {
+                        'portrait': '3/4',
+                        'landscape': '4/3',
+                        'ultrawide': '21/9',
+                    },
+                },
+            },
+            variants: {
+                extend: {
+                    opacity: ['disabled'],
+                    cursor: ['disabled'],
+                    backgroundColor: ['active', 'disabled'],
+                    textColor: ['active', 'disabled'],
+                },
+            },
+        }
+    </script>
+
+    <!-- Utilities and Components -->
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Base Styles -->
+    <style>
+        * {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Webkit browsers like Chrome, Safari, newer Edge */
+        *::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+
+            a[href]:after {
+                content: " (" attr(href) ")";
+            }
+        }
+    </style>
+
+    <!-- Enhanced Image Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            const tempImage = new Image();
+                            tempImage.onload = () => {
+                                img.src = img.dataset.src;
+                                img.classList.remove('opacity-0');
+                                img.classList.add('opacity-100');
+                            };
+                            tempImage.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px',
+                threshold: 0.01
+            });
+
+            const loadImage = (img) => {
+                if ('loading' in HTMLImageElement.prototype) {
+                    img.loading = 'lazy';
+                }
+
+                img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+
+                img.onerror = () => {
+                    const width = img.getAttribute('width') || img.clientWidth || 300;
+                    const height = img.getAttribute('height') || img.clientHeight || 200;
+                    img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+                    img.alt = 'Image unavailable';
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100', 'error-image');
+                };
+
+                if (img.dataset.src) {
+                    imageObserver.observe(img);
+                } else {
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                }
+            };
+
+            document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+            // Watch for dynamically added images
+            new MutationObserver((mutations) => {
+                mutations.forEach(mutation => {
+                    mutation.addedNodes.forEach(node => {
+                        if (node.nodeType === 1) {
+                            if (node.tagName === 'IMG') {
+                                loadImage(node);
+                            }
+                            node.querySelectorAll('img').forEach(loadImage);
+                        }
+                    });
+                });
+            }).observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+            // Create performance observer
+            const observer = new PerformanceObserver((list) => {
+                const entries = list.getEntries();
+                entries.forEach((entry) => {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                        // console.log(`LCP: ${entry.startTime}ms`);
+                    }
+                    if (entry.entryType === 'first-input') {
+                        // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+                    }
+                    if (entry.entryType === 'layout-shift') {
+                        // console.log(`CLS: ${entry.value}`);
+                    }
+                });
+            });
+
+            // Observe performance metrics
+            observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+            // Log basic performance metrics
+            window.addEventListener('load', () => {
+                const timing = performance.getEntriesByType('navigation')[0];
+                console.log({
+                    'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+                    'TCP Connection': timing.connectEnd - timing.connectStart,
+                    'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+                    'Page Load': timing.loadEventEnd - timing.navigationStart
+                });
+            });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+            document.body.classList.remove('offline');
+            console.log('Connection restored');
+        });
+
+        window.addEventListener('offline', () => {
+            document.body.classList.add('offline');
+            console.log('Connection lost');
+        });
+    </script>
+    <style>
+        *,
+        ::before,
+        ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+
+        /* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
+
+        ::after,
+        ::before {
+            --tw-content: ''
+        }
+
+        :host,
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            tab-size: 4;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        b,
+        strong {
+            font-weight: bolder
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            font-size: 1em
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        input:where([type=button]),
+        input:where([type=reset]),
+        input:where([type=submit]) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+
+        :-moz-focusring {
+            outline: auto
+        }
+
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+
+        progress {
+            vertical-align: baseline
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        summary {
+            display: list-item
+        }
+
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0
+        }
+
+        legend {
+            padding: 0
+        }
+
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        dialog {
+            padding: 0
+        }
+
+        textarea {
+            resize: vertical
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+
+        [role=button],
+        button {
+            cursor: pointer
+        }
+
+        :disabled {
+            cursor: default
+        }
+
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+
+        [hidden]:where(:not([hidden=until-found])) {
+            display: none
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+
+        .pointer-events-none {
+            pointer-events: none
+        }
+
+        .fixed {
+            position: fixed
+        }
+
+        .absolute {
+            position: absolute
+        }
+
+        .relative {
+            position: relative
+        }
+
+        .inset-0 {
+            inset: 0px
+        }
+
+        .inset-y-0 {
+            top: 0px;
+            bottom: 0px
+        }
+
+        .bottom-0 {
+            bottom: 0px
+        }
+
+        .left-0 {
+            left: 0px
+        }
+
+        .right-2 {
+            right: 0.5rem
+        }
+
+        .top-2 {
+            top: 0.5rem
+        }
+
+        .bottom-8 {
+            bottom: 2rem
+        }
+
+        .right-8 {
+            right: 2rem
+        }
+
+        .z-50 {
+            z-index: 50
+        }
+
+        .z-10 {
+            z-index: 10
+        }
+
+        .col-span-1 {
+            grid-column: span 1 / span 1
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .-mr-1 {
+            margin-right: -0.25rem
+        }
+
+        .mb-12 {
+            margin-bottom: 3rem
+        }
+
+        .mb-2 {
+            margin-bottom: 0.5rem
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+
+        .ml-2 {
+            margin-left: 0.5rem
+        }
+
+        .mr-2 {
+            margin-right: 0.5rem
+        }
+
+        .mt-8 {
+            margin-top: 2rem
+        }
+
+        .-ml-1 {
+            margin-left: -0.25rem
+        }
+
+        .ml-3 {
+            margin-left: 0.75rem
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem
+        }
+
+        .mt-4 {
+            margin-top: 1rem
+        }
+
+        .block {
+            display: block
+        }
+
+        .inline-block {
+            display: inline-block
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .inline-flex {
+            display: inline-flex
+        }
+
+        .grid {
+            display: grid
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .h-16 {
+            height: 4rem
+        }
+
+        .h-6 {
+            height: 1.5rem
+        }
+
+        .h-8 {
+            height: 2rem
+        }
+
+        .h-4 {
+            height: 1rem
+        }
+
+        .h-5 {
+            height: 1.25rem
+        }
+
+        .h-\[100px\] {
+            height: 100px
+        }
+
+        .min-h-screen {
+            min-height: 100vh
+        }
+
+        .min-h-\[70vh\] {
+            min-height: 70vh
+        }
+
+        .w-6 {
+            width: 1.5rem
+        }
+
+        .w-8 {
+            width: 2rem
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        .w-4 {
+            width: 1rem
+        }
+
+        .w-5 {
+            width: 1.25rem
+        }
+
+        .max-w-7xl {
+            max-width: 80rem
+        }
+
+        .max-w-2xl {
+            max-width: 42rem
+        }
+
+        .max-w-4xl {
+            max-width: 56rem
+        }
+
+        .max-w-6xl {
+            max-width: 72rem
+        }
+
+        .max-w-none {
+            max-width: none
+        }
+
+        .flex-1 {
+            flex: 1 1 0%
+        }
+
+        .flex-shrink-0 {
+            flex-shrink: 0
+        }
+
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .list-inside {
+            list-style-position: inside
+        }
+
+        .list-decimal {
+            list-style-type: decimal
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr))
+        }
+
+        .flex-col {
+            flex-direction: column
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+
+        .items-start {
+            align-items: flex-start
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .justify-center {
+            justify-content: center
+        }
+
+        .justify-between {
+            justify-content: space-between
+        }
+
+        .gap-4 {
+            gap: 1rem
+        }
+
+        .gap-8 {
+            gap: 2rem
+        }
+
+        .space-x-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 0;
+            margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+            margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))
+        }
+
+        .space-x-8> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 0;
+            margin-right: calc(2rem * var(--tw-space-x-reverse));
+            margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)))
+        }
+
+        .space-y-4> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(1rem * var(--tw-space-y-reverse))
+        }
+
+        .space-x-4> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 0;
+            margin-right: calc(1rem * var(--tw-space-x-reverse));
+            margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)))
+        }
+
+        .space-y-6> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+        }
+
+        .space-y-8> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(2rem * var(--tw-space-y-reverse))
+        }
+
+        .space-y-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
+        }
+
+        .space-y-3> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.75rem * var(--tw-space-y-reverse))
+        }
+
+        .space-x-6> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 0;
+            margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+            margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))
+        }
+
+        .overflow-hidden {
+            overflow: hidden
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth
+        }
+
+        .whitespace-pre-wrap {
+            white-space: pre-wrap
+        }
+
+        .break-all {
+            word-break: break-all
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .rounded-lg {
+            border-radius: 0.5rem
+        }
+
+        .rounded-xl {
+            border-radius: 0.75rem
+        }
+
+        .rounded-md {
+            border-radius: 0.375rem
+        }
+
+        .rounded {
+            border-radius: 0.25rem
+        }
+
+        .border {
+            border-width: 1px
+        }
+
+        .border-b {
+            border-bottom-width: 1px
+        }
+
+        .border-gray-600 {
+            --tw-border-opacity: 1;
+            border-color: rgb(75 85 99 / var(--tw-border-opacity, 1))
+        }
+
+        .border-transparent {
+            border-color: transparent
+        }
+
+        .border-emerald-500\/20 {
+            border-color: rgb(16 185 129 / 0.2)
+        }
+
+        .border-yellow-500\/20 {
+            border-color: rgb(234 179 8 / 0.2)
+        }
+
+        .border-neutral-800 {
+            --tw-border-opacity: 1;
+            border-color: rgb(38 38 38 / var(--tw-border-opacity, 1))
+        }
+
+        .bg-neutral-800 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-neutral-900 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-emerald-500 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-emerald-600 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-neutral-800\/50 {
+            background-color: rgb(38 38 38 / 0.5)
+        }
+
+        .bg-neutral-700 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(64 64 64 / var(--tw-bg-opacity, 1))
+        }
+
+        .bg-emerald-900\/20 {
+            background-color: rgb(6 78 59 / 0.2)
+        }
+
+        .bg-yellow-900\/20 {
+            background-color: rgb(113 63 18 / 0.2)
+        }
+
+        .bg-\[radial-gradient\(circle_at_30\%_30\%\2c rgba\(59\2c 130\2c 246\2c 0\.1\)\2c transparent_70\%\)\] {
+            background-image: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1), transparent 70%)
+        }
+
+        .bg-gradient-to-r {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops))
+        }
+
+        .from-emerald-400 {
+            --tw-gradient-from: #34d399 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(52 211 153 / 0) var(--tw-gradient-to-position);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+        }
+
+        .from-emerald-600\/20 {
+            --tw-gradient-from: rgb(5 150 105 / 0.2) var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(5 150 105 / 0) var(--tw-gradient-to-position);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+        }
+
+        .to-blue-500 {
+            --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position)
+        }
+
+        .to-blue-600\/20 {
+            --tw-gradient-to: rgb(37 99 235 / 0.2) var(--tw-gradient-to-position)
+        }
+
+        .bg-clip-text {
+            -webkit-background-clip: text;
+            background-clip: text
+        }
+
+        .fill-neutral-800 {
+            fill: #262626
+        }
+
+        .p-4 {
+            padding: 1rem
+        }
+
+        .p-8 {
+            padding: 2rem
+        }
+
+        .p-2 {
+            padding: 0.5rem
+        }
+
+        .p-6 {
+            padding: 1.5rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem
+        }
+
+        .py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem
+        }
+
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem
+        }
+
+        .px-2 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem
+        }
+
+        .py-1 {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem
+        }
+
+        .pl-10 {
+            padding-left: 2.5rem
+        }
+
+        .pl-3 {
+            padding-left: 0.75rem
+        }
+
+        .pr-3 {
+            padding-right: 0.75rem
+        }
+
+        .pt-4 {
+            padding-top: 1rem
+        }
+
+        .pb-4 {
+            padding-bottom: 1rem
+        }
+
+        .pb-8 {
+            padding-bottom: 2rem
+        }
+
+        .pt-12 {
+            padding-top: 3rem
+        }
+
+        .text-left {
+            text-align: left
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .font-mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem
+        }
+
+        .text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem
+        }
+
+        .text-base {
+            font-size: 1rem;
+            line-height: 1.5rem
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem
+        }
+
+        .font-bold {
+            font-weight: 700
+        }
+
+        .font-medium {
+            font-weight: 500
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .text-emerald-500 {
+            --tw-text-opacity: 1;
+            color: rgb(16 185 129 / var(--tw-text-opacity, 1))
+        }
+
+        .text-gray-300 {
+            --tw-text-opacity: 1;
+            color: rgb(209 213 219 / var(--tw-text-opacity, 1))
+        }
+
+        .text-gray-400 {
+            --tw-text-opacity: 1;
+            color: rgb(156 163 175 / var(--tw-text-opacity, 1))
+        }
+
+        .text-gray-800 {
+            --tw-text-opacity: 1;
+            color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+        }
+
+        .text-emerald-400 {
+            --tw-text-opacity: 1;
+            color: rgb(52 211 153 / var(--tw-text-opacity, 1))
+        }
+
+        .text-transparent {
+            color: transparent
+        }
+
+        .text-emerald-300 {
+            --tw-text-opacity: 1;
+            color: rgb(110 231 183 / var(--tw-text-opacity, 1))
+        }
+
+        .text-emerald-200\/80 {
+            color: rgb(167 243 208 / 0.8)
+        }
+
+        .text-yellow-200\/80 {
+            color: rgb(254 240 138 / 0.8)
+        }
+
+        .text-yellow-300 {
+            --tw-text-opacity: 1;
+            color: rgb(253 224 71 / var(--tw-text-opacity, 1))
+        }
+
+        .text-yellow-400 {
+            --tw-text-opacity: 1;
+            color: rgb(250 204 21 / var(--tw-text-opacity, 1))
+        }
+
+        .text-red-400 {
+            --tw-text-opacity: 1;
+            color: rgb(248 113 113 / var(--tw-text-opacity, 1))
+        }
+
+        .antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        .placeholder-gray-400::placeholder {
+            --tw-placeholder-opacity: 1;
+            color: rgb(156 163 175 / var(--tw-placeholder-opacity, 1))
+        }
+
+        .shadow-2xl {
+            --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+
+        .shadow-sm {
+            --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+
+        .shadow-lg {
+            --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+
+        .backdrop-blur-sm {
+            --tw-backdrop-blur: blur(4px);
+            -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+        }
+
+        .transition-colors {
+            transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms
+        }
+
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms
+        }
+
+        .duration-200 {
+            transition-duration: 200ms
+        }
+
+        .hover\:scale-105:hover {
+            --tw-scale-x: 1.05;
+            --tw-scale-y: 1.05;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+
+        .hover\:border-gray-400:hover {
+            --tw-border-opacity: 1;
+            border-color: rgb(156 163 175 / var(--tw-border-opacity, 1))
+        }
+
+        .hover\:bg-emerald-600:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1))
+        }
+
+        .hover\:bg-emerald-700:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(4 120 87 / var(--tw-bg-opacity, 1))
+        }
+
+        .hover\:text-white:hover {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+        }
+
+        .hover\:text-emerald-300:hover {
+            --tw-text-opacity: 1;
+            color: rgb(110 231 183 / var(--tw-text-opacity, 1))
+        }
+
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal
+        }
+
+        .focus\:absolute:focus {
+            position: absolute
+        }
+
+        .focus\:left-0:focus {
+            left: 0px
+        }
+
+        .focus\:top-0:focus {
+            top: 0px
+        }
+
+        .focus\:z-50:focus {
+            z-index: 50
+        }
+
+        .focus\:border-emerald-500:focus {
+            --tw-border-opacity: 1;
+            border-color: rgb(16 185 129 / var(--tw-border-opacity, 1))
+        }
+
+        .focus\:bg-white:focus {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+        }
+
+        .focus\:p-4:focus {
+            padding: 1rem
+        }
+
+        .focus\:text-black:focus {
+            --tw-text-opacity: 1;
+            color: rgb(0 0 0 / var(--tw-text-opacity, 1))
+        }
+
+        .focus\:outline-none:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px
+        }
+
+        .focus\:ring-2:focus {
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+        }
+
+        .focus\:ring-emerald-500:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(16 185 129 / var(--tw-ring-opacity, 1))
+        }
+
+        .focus\:ring-gray-500:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity, 1))
+        }
+
+        .focus\:ring-offset-2:focus {
+            --tw-ring-offset-width: 2px
+        }
+
+        @media (min-width: 640px) {
+            .sm\:flex-row {
+                flex-direction: row
+            }
+
+            .sm\:space-x-4> :not([hidden])~ :not([hidden]) {
+                --tw-space-x-reverse: 0;
+                margin-right: calc(1rem * var(--tw-space-x-reverse));
+                margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)))
+            }
+
+            .sm\:space-y-0> :not([hidden])~ :not([hidden]) {
+                --tw-space-y-reverse: 0;
+                margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+                margin-bottom: calc(0px * var(--tw-space-y-reverse))
+            }
+
+            .sm\:px-6 {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem
+            }
+        }
+
+        @media (min-width: 768px) {
+            .md\:col-span-2 {
+                grid-column: span 2 / span 2
+            }
+
+            .md\:mt-0 {
+                margin-top: 0px
+            }
+
+            .md\:flex {
+                display: flex
+            }
+
+            .md\:hidden {
+                display: none
+            }
+
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+
+            .md\:flex-row {
+                flex-direction: row
+            }
+
+            .md\:text-6xl {
+                font-size: 3.75rem;
+                line-height: 1
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:px-8 {
+                padding-left: 2rem;
+                padding-right: 2rem
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .dark\:bg-gray-900 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 min-h-screen flex flex-col" cz-shortcut-listen="true">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+        Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+    </header>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+    </main>
+
+    <!-- {bodyScripts} -->
+    <htmlcode id="stepA">
+        <div id="root">
+            <section id="stepOne" class="py-20 bg-neutral-800">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <h2 class="text-3xl font-bold text-white mb-4">Step 1: Enter API Credentials</h2>
+                        <p class="text-gray-300">Enter your Telegram API credentials to begin the session generation
+                            process</p>
+                    </div>
+
+                    <div class="bg-neutral-900 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp">
+                        <form id="stepOneForm" class="space-y-6">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="appId" class="block text-sm font-medium text-gray-300 mb-2">App
+                                        ID</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                            </svg>
+                                        </div>
+                                        <input type="number" id="appId" name="appId" required=""
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            placeholder="Enter your App ID">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="appHash" class="block text-sm font-medium text-gray-300 mb-2">App
+                                        Hash</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="appHash" name="appHash" required=""
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            placeholder="Enter your App Hash">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="phoneNumber" class="block text-sm font-medium text-gray-300 mb-2">Phone
+                                        Number</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <input type="tel" id="phoneNumber" name="phoneNumber" required=""
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            placeholder="Enter your phone number">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center pt-4">
+                                <button type="submit"
+                                    class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105">
+                                    <span>Continue to Next Step</span>
+                                    <svg class="ml-2 -mr-1 h-5 w-5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="mt-8 text-center text-sm text-gray-400">
+                        <p>Need help finding your API credentials?
+                            <a href="https://my.telegram.org/apps" target="_blank" rel="noopener noreferrer"
+                                class="text-emerald-400 hover:text-emerald-300">
+                                Visit Telegram's API Development Tools
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                document.getElementById('stepOneForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const formData = {
+                        appId: document.getElementById('appId').value,
+                        appHash: document.getElementById('appHash').value,
+                        phoneNumber: document.getElementById('phoneNumber').value
+                    };
+
+                    alert('Form submitted! Check the console for the form data.');
+
+                    document.getElementById('stepA').style.display = 'none';
+                    document.getElementById('stepB').style.display = 'block';
+
+                    console.log('Form data:', formData);
+                });
+            </script>
+        </div>
+    </htmlcode>
+    <htmlcode id="stepB" style="display: none;">
+        <div id="root">
+            <section id="stepTwo" class="py-20 bg-neutral-900">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <h2 class="text-3xl font-bold text-white mb-4">Step 2: Verify Code</h2>
+                        <p class="text-gray-300">Enter the verification code sent to your Telegram account</p>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp">
+                        <form id="stepTwoForm" class="space-y-6">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="verificationCode"
+                                        class="block text-sm font-medium text-gray-300 mb-2">Verification Code</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="verificationCode" name="verificationCode" required=""
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            placeholder="Enter verification code">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4">
+                                <button type="button"
+                                    onclick="document.getElementById('stepOne').scrollIntoView({behavior: 'smooth'})"
+                                    class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200">
+                                    <svg class="mr-2 -ml-1 h-5 w-5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
+                                    </svg>
+                                    <span>Back</span>
+                                </button>
+
+                                <button type="submit"
+                                    class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105">
+                                    <span>Verify Code</span>
+                                    <svg class="ml-2 -mr-1 h-5 w-5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="mt-8 text-center animate__animated animate__fadeIn">
+                            <div class="inline-block px-4 py-2 bg-neutral-700 rounded-lg">
+                                <p class="text-sm text-gray-300">
+                                    <svg class="inline-block h-5 w-5 text-emerald-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    Check your Telegram app for the verification code
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                document.getElementById('stepTwoForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const verificationCode = document.getElementById('verificationCode').value;
+
+                    // Add smooth scroll to next section
+                    document.getElementById('stepThree').scrollIntoView({ behavior: 'smooth' });
+
+                    // Here you would typically send the verification code to your backend
+                    console.log('Verification code:', verificationCode);
+                });
+            </script>
+        </div>
+    </htmlcode>
+    <htmlcode id="stepC" style="display: none;">
+        <div id="root">
+            <section id="stepThree" class="py-20 bg-neutral-800">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <h2 class="text-3xl font-bold text-white mb-4">Step 3: Two-Factor Authentication</h2>
+                        <p class="text-gray-300">Enter your 2FA password if you have it enabled</p>
+                    </div>
+
+                    <div class="bg-neutral-900 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp">
+                        <form id="stepThreeForm" class="space-y-6">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="twoFactorCode" class="block text-sm font-medium text-gray-300 mb-2">2FA
+                                        Password</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <input type="password" id="twoFactorCode" name="twoFactorCode"
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            placeholder="Enter your 2FA password">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4">
+                                <button type="button"
+                                    onclick="document.getElementById('stepTwo').scrollIntoView({behavior: 'smooth'})"
+                                    class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200">
+                                    <svg class="mr-2 -ml-1 h-5 w-5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
+                                    </svg>
+                                    <span>Back</span>
+                                </button>
+
+                                <button type="submit"
+                                    class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105">
+                                    <span>Generate Session</span>
+                                    <svg class="ml-2 -mr-1 h-5 w-5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="mt-8 text-center animate__animated animate__fadeIn">
+                            <div class="inline-block px-4 py-2 bg-neutral-700 rounded-lg">
+                                <p class="text-sm text-gray-300">
+                                    <svg class="inline-block h-5 w-5 text-emerald-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    Skip this step if you don't have 2FA enabled
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="mt-8 bg-emerald-900/20 border border-emerald-500/20 rounded-lg p-4 animate__animated animate__fadeIn">
+                        <div class="flex items-center">
+                            <svg class="h-6 w-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="ml-3 text-sm text-emerald-300">
+                                Your session string will be generated in the next step. Make sure to save it in a secure
+                                location.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                document.getElementById('stepThreeForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const twoFactorCode = document.getElementById('twoFactorCode').value;
+
+                    // Add smooth scroll to next section
+                    document.getElementById('stepFour').scrollIntoView({ behavior: 'smooth' });
+
+                    // Here you would typically send the 2FA code to your backend
+                    console.log('2FA code:', twoFactorCode);
+                });
+            </script>
+        </div>
+    </htmlcode>
+    <htmlcode id="stepD" style="display: none;">
+        <div id="root">
+            <section id="stepFour" class="py-20 bg-neutral-900">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <h2 class="text-3xl font-bold text-white mb-4">Step 4: Your String Session</h2>
+                        <p class="text-gray-300">Here's your generated string session. Keep it safe and secure!</p>
+                    </div>
+
+                    <div class="bg-neutral-800 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp">
+                        <div class="space-y-6">
+                            <div class="relative">
+                                <div class="bg-neutral-700 rounded-lg p-4">
+                                    <pre id="sessionString"
+                                        class="text-emerald-400 text-sm break-all whitespace-pre-wrap font-mono">1BQANOTEuMTA4LjU2LjE5MQG7DcuBksjdl9i+ZXKfYGZeHGJkZupWosD8c3GAqi7yeUZrnayxy/RrpRRZ1bM7pRvVBEbCuAakQbGRNmUQ4kdYJOX0p2RtUDWesS6rBXGmC6jLPY2VPd0MWO3tGVFgB1gQPIXA0Tn8QS52ew1FEi3nsWEevD+ft3ZjP0LI6MMGwvoDkdFSgk5mbHEY810=</pre>
+                                </div>
+                                <button onclick="copyToClipboard()"
+                                    class="absolute top-2 right-2 p-2 text-gray-400 hover:text-white bg-neutral-800 rounded-md transition-colors duration-200">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="flex justify-center space-x-4">
+                                <button onclick="copyToClipboard()"
+                                    class="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
+                                    <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    Copy to Clipboard
+                                </button>
+
+                                <button onclick="window.location.reload()"
+                                    class="inline-flex items-center px-6 py-3 border border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 font-medium rounded-lg transition-all duration-200">
+                                    <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                        </path>
+                                    </svg>
+                                    Generate New Session
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 space-y-4">
+                            <div class="bg-yellow-900/20 border border-yellow-500/20 rounded-lg p-4">
+                                <div class="flex">
+                                    <svg class="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                        </path>
+                                    </svg>
+                                    <div class="ml-3">
+                                        <h3 class="text-sm font-medium text-yellow-300">Important Security Notice</h3>
+                                        <p class="mt-2 text-sm text-yellow-200/80">
+                                            Never share your string session with anyone. It provides full access to your
+                                            Telegram account.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-emerald-900/20 border border-emerald-500/20 rounded-lg p-4">
+                                <div class="flex">
+                                    <svg class="h-6 w-6 text-emerald-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <div class="ml-3">
+                                        <h3 class="text-sm font-medium text-emerald-300">Usage Instructions</h3>
+                                        <p class="mt-2 text-sm text-emerald-200/80">
+                                            Copy this string and use it in your Telegram application configuration.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                function copyToClipboard() {
+                    const sessionString = document.getElementById('sessionString');
+                    const textArea = document.createElement('textarea');
+                    textArea.value = sessionString.textContent;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+
+                    // Show toast notification
+                    const toast = document.createElement('div');
+                    toast.className = 'fixed bottom-4 right-4 bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg animate__animated animate__fadeIn';
+                    toast.textContent = 'Copied to clipboard!';
+                    document.body.appendChild(toast);
+
+                    setTimeout(() => {
+                        toast.classList.remove('animate__fadeIn');
+                        toast.classList.add('animate__fadeOut');
+                        setTimeout(() => document.body.removeChild(toast), 1000);
+                    }, 2000);
+                }
+
+                // Simulate receiving session string from backend
+                setTimeout(() => {
+                    document.getElementById('sessionString').textContent = '1BQANOTEuMTA4LjU2LjE5MQG7DcuBksjdl9i+ZXKfYGZeHGJkZupWosD8c3GAqi7yeUZrnayxy/RrpRRZ1bM7pRvVBEbCuAakQbGRNmUQ4kdYJOX0p2RtUDWesS6rBXGmC6jLPY2VPd0MWO3tGVFgB1gQPIXA0Tn8QS52ew1FEi3nsWEevD+ft3ZjP0LI6MMGwvoDkdFSgk5mbHEY810=';
+                }, 1500);
+            </script>
+        </div>
+    </htmlcode>
+    <htmlcode id="documentation" style="display: none;">
+        <div id="root">
+            <section id="documentation" class="py-20 bg-neutral-800">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <h2 class="text-3xl font-bold text-white mb-4">Documentation</h2>
+                        <p class="text-gray-300">Learn how to use your string session securely and effectively</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Getting Started -->
+                        <div class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp">
+                            <div class="flex items-center mb-4">
+                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                                <h3 class="ml-2 text-xl font-semibold text-white">Getting Started</h3>
+                            </div>
+                            <div class="prose prose-invert max-w-none">
+                                <p class="text-gray-300">Follow these steps to use your string session:</p>
+                                <ol class="list-decimal list-inside text-gray-300 space-y-2 mt-4">
+                                    <li>Install the required libraries: <code
+                                            class="bg-neutral-800 px-2 py-1 rounded">pip install telethon</code></li>
+                                    <li>Copy your generated string session</li>
+                                    <li>Use it in your Python script as shown in the example below</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!-- Code Example -->
+                        <div
+                            class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp animation-delay-100">
+                            <div class="flex items-center mb-4">
+                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                                <h3 class="ml-2 text-xl font-semibold text-white">Code Example</h3>
+                            </div>
+                            <div class="relative">
+                                <pre class="bg-neutral-800 rounded-lg p-4 text-sm text-emerald-400 font-mono"><code>from telethon import TelegramClient
+
+# Your credentials
+api_id = 'your_api_id'
+api_hash = 'your_api_hash'
+string_session = 'your_string_session'
+
+# Create the client
+client = TelegramClient(string_session, api_id, api_hash)
+
+async with client:
+  print("Connected successfully!")</code></pre>
+                                <button onclick="copyCode(this)"
+                                    class="absolute top-2 right-2 p-2 text-gray-400 hover:text-white bg-neutral-900 rounded-md transition-colors duration-200">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Security Notes -->
+                        <div
+                            class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp animation-delay-200">
+                            <div class="flex items-center mb-4">
+                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
+                                </svg>
+                                <h3 class="ml-2 text-xl font-semibold text-white">Security Guidelines</h3>
+                            </div>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-red-400 mr-2 flex-shrink-0" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                        </path>
+                                    </svg>
+                                    Never share your string session with anyone
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-red-400 mr-2 flex-shrink-0" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                        </path>
+                                    </svg>
+                                    Keep your session string in a secure location
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-red-400 mr-2 flex-shrink-0" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                        </path>
+                                    </svg>
+                                    Generate a new session if security is compromised
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Troubleshooting -->
+                        <div
+                            class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp animation-delay-300">
+                            <div class="flex items-center mb-4">
+                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <h3 class="ml-2 text-xl font-semibold text-white">Troubleshooting</h3>
+                            </div>
+                            <div class="space-y-4 text-gray-300">
+                                <p class="flex items-center">
+                                    <svg class="h-5 w-5 text-emerald-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    If you encounter connection issues, try regenerating the session
+                                </p>
+                                <p class="flex items-center">
+                                    <svg class="h-5 w-5 text-emerald-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    Ensure your API credentials are correct
+                                </p>
+                                <p class="flex items-center">
+                                    <svg class="h-5 w-5 text-emerald-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    Check your internet connection
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                function copyCode(button) {
+                    const pre = button.parentElement.querySelector('pre');
+                    const textArea = document.createElement('textarea');
+                    textArea.value = pre.textContent;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+
+                    // Show toast notification
+                    const toast = document.createElement('div');
+                    toast.className = 'fixed bottom-4 right-4 bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg animate__animated animate__fadeIn';
+                    toast.textContent = 'Code copied to clipboard!';
+                    document.body.appendChild(toast);
+
+                    setTimeout(() => {
+                        toast.classList.remove('animate__fadeIn');
+                        toast.classList.add('animate__fadeOut');
+                        setTimeout(() => document.body.removeChild(toast), 1000);
+                    }, 2000);
+                }
+            </script>
+        </div>
+    </htmlcode>
+    <htmlcode id="faq" style="display: none;">
+        <div id="root">
+            <section id="faq" class="py-20 bg-neutral-900">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                        <p class="text-gray-300">Everything you need to know about string sessions</p>
+                    </div>
+
+                    <div class="space-y-4 animate__animated animate__fadeInUp">
+                        <!-- FAQ Item 1 -->
+                        <div class="bg-neutral-800 rounded-lg">
+                            <button
+                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
+                                <span class="text-white font-medium">What is a string session?</span>
+                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden px-4 pb-4">
+                                <p class="text-gray-300">A string session is a encoded string that contains your account
+                                    information and authentication details. It allows you to connect to Telegram without
+                                    re-authenticating each time.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="bg-neutral-800 rounded-lg">
+                            <button
+                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
+                                <span class="text-white font-medium">Is it safe to use string sessions?</span>
+                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden px-4 pb-4">
+                                <p class="text-gray-300">Yes, string sessions are safe when used properly. However,
+                                    never share your string session with anyone as it provides full access to your
+                                    Telegram account.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="bg-neutral-800 rounded-lg">
+                            <button
+                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
+                                <span class="text-white font-medium">How long does a string session last?</span>
+                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden px-4 pb-4">
+                                <p class="text-gray-300">String sessions typically remain valid until you manually
+                                    revoke them or log out of your Telegram account. However, it's recommended to
+                                    generate new ones periodically for security.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="bg-neutral-800 rounded-lg">
+                            <button
+                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
+                                <span class="text-white font-medium">What if I lose my string session?</span>
+                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden px-4 pb-4">
+                                <p class="text-gray-300">If you lose your string session, simply generate a new one. The
+                                    old session will still work unless manually revoked, so it's recommended to revoke
+                                    all sessions from your Telegram settings first.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="bg-neutral-800 rounded-lg">
+                            <button
+                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
+                                <span class="text-white font-medium">Can I use multiple string sessions?</span>
+                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="faq-content hidden px-4 pb-4">
+                                <p class="text-gray-300">Yes, you can generate and use multiple string sessions for the
+                                    same account. Each session operates independently and can be revoked individually.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                document.querySelectorAll('.faq-toggle').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const content = button.nextElementSibling;
+                        const icon = button.querySelector('.faq-icon');
+
+                        // Toggle content
+                        content.classList.toggle('hidden');
+
+                        // Rotate icon
+                        icon.style.transform = content.classList.contains('hidden')
+                            ? 'rotate(0deg)'
+                            : 'rotate(180deg)';
+
+                        // Animate content
+                        if (!content.classList.contains('hidden')) {
+                            content.style.opacity = '0';
+                            content.style.maxHeight = '0';
+                            requestAnimationFrame(() => {
+                                content.style.transition = 'opacity 300ms, max-height 300ms';
+                                content.style.opacity = '1';
+                                content.style.maxHeight = content.scrollHeight + 'px';
+                            });
+                        } else {
+                            content.style.opacity = '0';
+                            content.style.maxHeight = '0';
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </htmlcode>
+    <htmlcode>
+        <div id="root">
+            <footer id="footer" class="bg-neutral-900 pt-12 pb-8">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-neutral-800">
+                        <!-- Brand Section -->
+                        <div class="col-span-1 md:col-span-2">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                                <span class="text-white text-xl font-bold">StringSession</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">Secure and efficient Telegram string session generation for
+                                your applications.</p>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com"
+                                    class="text-gray-400 hover:text-white transition-colors duration-200">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://telegram.org"
+                                    class="text-gray-400 hover:text-white transition-colors duration-200">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.5 3.68-.52.36-.99.54-1.42.53-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.29-.48.79-.73 3.08-1.34 5.15-2.23 6.16-2.66 2.94-1.27 3.55-1.49 3.95-1.5.87-.02 1.27.51 1.26.74l-.25 5.07z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://twitter.com"
+                                    class="text-gray-400 hover:text-white transition-colors duration-200">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                            <ul class="space-y-2">
+                                <li><a href="#stepOne"
+                                        class="text-gray-400 hover:text-white transition-colors duration-200">Generate
+                                        Session</a></li>
+                                <li><a href="#documentation"
+                                        class="text-gray-400 hover:text-white transition-colors duration-200">Documentation</a>
+                                </li>
+                                <li><a href="#faq"
+                                        class="text-gray-400 hover:text-white transition-colors duration-200">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Resources -->
+                        <div>
+                            <h3 class="text-white font-semibold mb-4">Resources</h3>
+                            <ul class="space-y-2">
+                                <li><a href="https://docs.telethon.dev"
+                                        class="text-gray-400 hover:text-white transition-colors duration-200">Telethon
+                                        Docs</a></li>
+                                <li><a href="https://telegram.org/apps"
+                                        class="text-gray-400 hover:text-white transition-colors duration-200">Telegram
+                                        Apps</a></li>
+                                <li><a href="https://my.telegram.org"
+                                        class="text-gray-400 hover:text-white transition-colors duration-200">API
+                                        Development</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
+                        <p class="text-gray-400 text-sm">© 2024 StringSession Generator. All rights reserved.</p>
+                        <div class="flex space-x-6 mt-4 md:mt-0">
+                            <a href="#"
+                                class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy
+                                Policy</a>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of
+                                Service</a>
+                            <a href="#"
+                                class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to Top Button -->
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                    class="fixed bottom-8 right-8 bg-emerald-600 text-white p-2 rounded-full shadow-lg hover:bg-emerald-700 transition-colors duration-200 animate__animated animate__fadeIn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                </button>
+            </footer>
+        </div>
+    </htmlcode><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+        style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+        <defs id="SvgjsDefs1002"></defs>
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+</body>
+
+</html>
