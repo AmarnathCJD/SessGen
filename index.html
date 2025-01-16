@@ -1713,12 +1713,18 @@
                         phoneNumber: document.getElementById('phoneNumber').value
                     };
 
-                    alert('Form submitted! Check the console for the form data.');
+                    fetch('/api/gen', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams(formData),
+                    }).then(response => response.json()).then(data => {
+                        console.log(data);
+                    });
 
                     document.getElementById('stepA').style.display = 'none';
                     document.getElementById('stepB').style.display = 'block';
-
-                    console.log('Form data:', formData);
                 });
             </script>
         </div>
