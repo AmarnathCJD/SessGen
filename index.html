@@ -1677,6 +1677,9 @@
                                             placeholder="Enter your phone number">
                                     </div>
                                 </div>
+                                <div id="errorContainer" class="hidden bg-red-400 text-white p-2 rounded-lg">
+                                    <p id="errorText"></p>
+                                </div>
                             </div>
 
                             <div class="flex justify-center pt-4">
@@ -1720,11 +1723,16 @@
                         },
                         body: new URLSearchParams(formData),
                     }).then(response => response.json()).then(data => {
-                        console.log(data);
-                    });
+                        localStorage.setItem('code_hash', data.hash);
+                        localStorage.setItem('phone_number', formData.phoneNumber);
+                        localStorage.setItem('tmp_session', data.partial_session);
 
-                    document.getElementById('stepA').style.display = 'none';
-                    document.getElementById('stepB').style.display = 'block';
+                        document.getElementById('stepA').style.display = 'none';
+                        document.getElementById('stepB').style.display = 'block';
+                    }).catch(error => {
+                        document.getElementById('errorText').innerText = error.message;
+                        document.getElementById('errorContainer').classList.remove('hidden');
+                    });
                 });
             </script>
         </div>
@@ -1764,7 +1772,7 @@
                             <div
                                 class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4">
                                 <button type="button"
-                                    onclick="document.getElementById('stepOne').scrollIntoView({behavior: 'smooth'})"
+                                    onclick="document.getElementById('stepA').style.display = 'block'; document.getElementById('stepB').style.display = 'none';"
                                     class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200">
                                     <svg class="mr-2 -ml-1 h-5 w-5" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
@@ -1807,11 +1815,32 @@
                     e.preventDefault();
                     const verificationCode = document.getElementById('verificationCode').value;
 
-                    // Add smooth scroll to next section
-                    document.getElementById('stepThree').scrollIntoView({ behavior: 'smooth' });
+                    fetch('/api/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({
+                            partial_session: localStorage.getItem('tmp_session'),
+                            phoneNumber: localStorage.getItem('phone_number'),
+                            code: verificationCode,
+                            codeHash: localStorage.getItem('code_hash'),
+                        }),
+                    }).then(response => response.json()).then(data => {
+                        localStorage.setItem('session', data.session);
+                        localStorage.removeItem('code_hash');
+                        localStorage.removeItem('phone_number');
+                        localStorage.removeItem('tmp_session');
 
-                    // Here you would typically send the verification code to your backend
-                    console.log('Verification code:', verificationCode);
+                        document.getElementById('stepB').style.display = 'none';
+                        document.getElementById('stepD').style.display = 'block';
+                    }).catch(error => {
+                        if (error.error === 'password needed') {
+                            localStorage.setItem('tmp_session', error.partial_session);
+                            document.getElementById('stepB').style.display = 'none';
+                            document.getElementById('stepC').style.display = 'block';
+                        }
+                    });
                 });
             </script>
         </div>
@@ -1851,7 +1880,7 @@
                             <div
                                 class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4">
                                 <button type="button"
-                                    onclick="document.getElementById('stepTwo').scrollIntoView({behavior: 'smooth'})"
+                                    onclick="document.getElementById('stepB').style.display = 'block'; document.getElementById('stepC').style.display = 'none';"
                                     class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200">
                                     <svg class="mr-2 -ml-1 h-5 w-5" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
@@ -1908,11 +1937,27 @@
                     e.preventDefault();
                     const twoFactorCode = document.getElementById('twoFactorCode').value;
 
-                    // Add smooth scroll to next section
-                    document.getElementById('stepFour').scrollIntoView({ behavior: 'smooth' });
+                    fetch('/api/passw', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({
+                            partial_session: localStorage.getItem('tmp_session'),
+                            password: twoFactorCode,
+                        }),
+                    }).then(response => response.json()).then(data => {
+                        localStorage.setItem('session', data.session);
+                        localStorage.removeItem('code_hash');
+                        localStorage.removeItem('phone_number');
+                        localStorage.removeItem('tmp_session');
 
-                    // Here you would typically send the 2FA code to your backend
-                    console.log('2FA code:', twoFactorCode);
+                        document.getElementById('stepC').style.display = 'none';
+                        document.getElementById('stepD').style.display = 'block';
+                    }).catch(error => {
+                        document.getElementById('errorText').innerText = error.message;
+                        document.getElementById('errorContainer').classList.remove('hidden');
+                    });
                 });
             </script>
         </div>
@@ -1931,7 +1976,7 @@
                             <div class="relative">
                                 <div class="bg-neutral-700 rounded-lg p-4">
                                     <pre id="sessionString"
-                                        class="text-emerald-400 text-sm break-all whitespace-pre-wrap font-mono">1BQANOTEuMTA4LjU2LjE5MQG7DcuBksjdl9i+ZXKfYGZeHGJkZupWosD8c3GAqi7yeUZrnayxy/RrpRRZ1bM7pRvVBEbCuAakQbGRNmUQ4kdYJOX0p2RtUDWesS6rBXGmC6jLPY2VPd0MWO3tGVFgB1gQPIXA0Tn8QS52ew1FEi3nsWEevD+ft3ZjP0LI6MMGwvoDkdFSgk5mbHEY810=</pre>
+                                        class="text-emerald-400 text-sm break-all whitespace-pre-wrap font-mono"></pre>
                                 </div>
                                 <button onclick="copyToClipboard()"
                                     class="absolute top-2 right-2 p-2 text-gray-400 hover:text-white bg-neutral-800 rounded-md transition-colors duration-200">
@@ -2030,7 +2075,7 @@
 
                 // Simulate receiving session string from backend
                 setTimeout(() => {
-                    document.getElementById('sessionString').textContent = '1BQANOTEuMTA4LjU2LjE5MQG7DcuBksjdl9i+ZXKfYGZeHGJkZupWosD8c3GAqi7yeUZrnayxy/RrpRRZ1bM7pRvVBEbCuAakQbGRNmUQ4kdYJOX0p2RtUDWesS6rBXGmC6jLPY2VPd0MWO3tGVFgB1gQPIXA0Tn8QS52ew1FEi3nsWEevD+ft3ZjP0LI6MMGwvoDkdFSgk5mbHEY810=';
+                    document.getElementById('sessionString').textContent = localStorage.getItem('session');
                 }, 1500);
             </script>
         </div>
@@ -2458,5 +2503,3 @@ async with client:
         <path id="SvgjsPath1004" d="M0 0 "></path>
     </svg>
 </body>
-
-</html>
