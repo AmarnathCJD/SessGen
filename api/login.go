@@ -3,7 +3,6 @@ package handler
 import (
 	"fmt"
 	"net/http"
-	"strconv"
 	"strings"
 
 	tg "github.com/amarnathcjd/gogram/telegram"
@@ -11,26 +10,18 @@ import (
 
 func HandleCodeLogin(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
-	appId := r.Form.Get("appId")
-	appHash := r.Form.Get("appHash")
+	sess := r.Form.Get("partial_session")
 	phone := r.Form.Get("phoneNumber")
 	code := r.Form.Get("code")
 	codeHash := r.Form.Get("codeHash")
 
-	if appId == "" || appHash == "" || phone == "" || code == "" || codeHash == "" {
-		http.Error(w, `{"error":"appId, appHash, phoneNumber, code and codeHash are required"}`, http.StatusBadRequest)
-		return
-	}
-
-	appIdInt, err := strconv.Atoi(appId)
-	if err != nil {
-		http.Error(w, `{"error":"appId must be a number"}`, http.StatusBadRequest)
+	if sess == "" || phone == "" || code == "" || codeHash == "" {
+		http.Error(w, `{"error":"partial_session, phoneNumber, code and codeHash are required"}`, http.StatusBadRequest)
 		return
 	}
 
 	client, err := tg.NewClient(tg.ClientConfig{
-		AppID:         int32(appIdInt),
-		AppHash:       appHash,
+		StringSession: sess,
 		MemorySession: true,
 	})
 

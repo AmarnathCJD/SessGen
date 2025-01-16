@@ -48,5 +48,5 @@ func SendCodeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Write([]byte(`{"hash":"` + hash + `"}`))
+	w.Write([]byte(`{"hash":"` + hash + `", "partial_session":"` + client.ExportSession() + `"}`))
 }
