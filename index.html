@@ -1587,29 +1587,20 @@
 </head>
 
 <body class="antialiased text-gray-800 min-h-screen flex flex-col" cz-shortcut-listen="true">
-    <!-- Skip to main content link for accessibility -->
     <a href="#main-content"
         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
         Skip to main content
     </a>
-
-    <!-- Header -->
-    <header class="relative z-50 bg-white dark:bg-gray-900">
-        <!-- Header content goes here -->
-    </header>
-
-    <!-- Main content area -->
-    <main id="main-content" class="flex-1 relative ">
-        <!-- Content will be injected here -->
-    </main>
-
-    <!-- {bodyScripts} -->
     <htmlcode id="stepA">
         <div id="root">
-            <section id="stepOne"
-                class="py-20 bg-neutral-800 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 animate__animated animate__fadeIn">
+            <section id="stepOne" class="py-20 bg-neutral-800 animate__animated animate__fadeIn">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <div class="absolute inset-0">
+                            <div
+                                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_70%)]">
+                            </div>
+                        </div>
                         <h2 class="text-3xl font-bold text-white mb-4">Gogram Session Generator</h2>
                         <p class="text-gray-300">Enter your Telegram API credentials to begin the session generation
                             process</p>
@@ -1736,75 +1727,72 @@
     <htmlcode id="stepB" style="display: none;">
         <div id="root">
             <section id="stepTwo" class="py-20 bg-neutral-900">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" id="el-2s2qo7vv">
-                    <div class="text-center mb-12 animate__animated animate__fadeIn" id="el-806m308u">
-                        <h2 class="text-3xl font-bold text-white mb-4" id="el-arogyorf">Step 2: Verify Code</h2>
-                        <p class="text-gray-300" id="el-6s514anm">Enter the verification code sent to your Telegram
-                            account</p>
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <div class="absolute inset-0">
+                            <div
+                                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_70%)]">
+                            </div>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-4">Step 2: Verify Code</h2>
+                        <p class="text-gray-300">Enter the verification code sent to your Telegram account</p>
                     </div>
 
-                    <div class="bg-neutral-800 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp"
-                        id="el-k9lag6dz">
+                    <div class="bg-neutral-800 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp">
                         <form id="stepTwoForm" class="space-y-6">
-                            <div class="space-y-4" id="el-eyqpga7x">
-                                <div id="el-x2jnguws" class="">
-                                    <label for="verificationCode" class="block text-sm font-medium text-gray-300 mb-2"
-                                        id="el-tucsa5qr">Verification Code</label>
-                                    <div class="flex justify-center space-x-2" id="el-jf5minba">
-                                        <input type="text" maxlength="1"
-                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                            required="" id="el-i3y7cj76">
-                                        <input type="text" maxlength="1"
-                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                            required="" id="el-mbqwkqke">
-                                        <input type="text" maxlength="1"
-                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                            required="" id="el-5agr1zgb">
-                                        <input type="text" maxlength="1"
-                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                            required="" id="el-lg6hjnaa">
-                                        <input type="text" maxlength="1"
-                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                            required="" id="el-lcgh3ybu">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="verificationCode"
+                                        class="block text-sm font-medium text-gray-300 mb-2">Verification Code</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="verificationCode" name="verificationCode" required=""
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            placeholder="Enter verification code">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4"
-                                id="el-ezduwwbs">
+                            <div
+                                class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4">
                                 <button type="button"
-                                    onclick="document.getElementById('stepA').style.display = 'block'; document.getElementById('stepB').style.display = 'none';"
-                                    class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200"
-                                    id="el-p1b2btq5">
+                                    onclick="document.getElementById('stepOne').scrollIntoView({behavior: 'smooth'})"
+                                    class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200">
                                     <svg class="mr-2 -ml-1 h-5 w-5" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" id="el-muyrg41y">
+                                        viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M11 17l-5-5m0 0l5-5m-5 5h12" id="el-a57j3t8j"></path>
+                                            d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
                                     </svg>
-                                    <span id="el-peuaq1m8">Back</span>
+                                    <span>Back</span>
                                 </button>
 
                                 <button type="submit"
-                                    class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105"
-                                    id="el-su3yvgnt">
-                                    <span id="el-hvgck684">Verify Code</span>
+                                    class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105">
+                                    <span>Verify Code</span>
                                     <svg class="ml-2 -mr-1 h-5 w-5" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" id="el-geaiegjv">
+                                        viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 7l5 5m0 0l-5 5m5-5H6" id="el-wpd6ytsa"></path>
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                     </svg>
                                 </button>
                             </div>
                         </form>
 
-                        <div class="mt-8 text-center animate__animated animate__fadeIn" id="el-nvk49998">
-                            <div class="inline-block px-4 py-2 bg-neutral-700 rounded-lg" id="el-vzccj9ag">
-                                <p class="text-sm text-gray-300" id="el-cl4cr64k">
+                        <div class="mt-8 text-center animate__animated animate__fadeIn">
+                            <div class="inline-block px-4 py-2 bg-neutral-700 rounded-lg">
+                                <p class="text-sm text-gray-300">
                                     <svg class="inline-block h-5 w-5 text-emerald-500 mr-2" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24" id="el-7soolhgv">
+                                        stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                            id="el-86c1awuu"></path>
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                     Check your Telegram app for the verification code
                                 </p>
@@ -1860,6 +1848,11 @@
             <section id="stepThree" class="py-20 bg-neutral-800">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <div class="absolute inset-0">
+                            <div
+                                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_70%)]">
+                            </div>
+                        </div>
                         <h2 class="text-3xl font-bold text-white mb-4">Step 3: Two-Factor Authentication</h2>
                         <p class="text-gray-300">Enter your 2FA password if you have it enabled</p>
                     </div>
@@ -1980,6 +1973,11 @@
             <section id="stepFour" class="py-20 bg-neutral-900">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
+                        <div class="absolute inset-0">
+                            <div
+                                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_70%)]">
+                            </div>
+                        </div>
                         <h2 class="text-3xl font-bold text-white mb-4">Step 4: Your String Session</h2>
                         <p class="text-gray-300">Here's your generated string session. Keep it safe and secure!</p>
                     </div>
