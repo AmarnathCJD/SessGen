@@ -8,15 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow">
 
-    <!-- Performance optimization: Preload critical resources -->
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
         as="style">
 
-    <!-- {headerScripts} -->
-
-    <!-- Core CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -64,7 +60,7 @@
                         },
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        sans: ['Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
                         heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
                     },
                     spacing: {
@@ -154,7 +150,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -278,7 +274,6 @@
 
             document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
 
-            // Watch for dynamically added images
             new MutationObserver((mutations) => {
                 mutations.forEach(mutation => {
                     mutation.addedNodes.forEach(node => {
@@ -472,7 +467,7 @@
             -webkit-text-size-adjust: 100%;
             -moz-tab-size: 4;
             tab-size: 4;
-            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+            font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
             font-feature-settings: normal;
             font-variation-settings: normal;
             -webkit-tap-highlight-color: transparent
@@ -1611,10 +1606,11 @@
     <!-- {bodyScripts} -->
     <htmlcode id="stepA">
         <div id="root">
-            <section id="stepOne" class="py-20 bg-neutral-800">
+            <section id="stepOne"
+                class="py-20 bg-neutral-800 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 animate__animated animate__fadeIn">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
-                        <h2 class="text-3xl font-bold text-white mb-4">Step 1: Enter API Credentials</h2>
+                        <h2 class="text-3xl font-bold text-white mb-4">Gogram Session Generator</h2>
                         <p class="text-gray-300">Enter your Telegram API credentials to begin the session generation
                             process</p>
                     </div>
@@ -1634,7 +1630,7 @@
                                                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                                             </svg>
                                         </div>
-                                        <input type="number" id="appId" name="appId" required=""
+                                        <input id="appId" name="appId" required=""
                                             class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                                             placeholder="Enter your App ID">
                                     </div>
@@ -1740,67 +1736,75 @@
     <htmlcode id="stepB" style="display: none;">
         <div id="root">
             <section id="stepTwo" class="py-20 bg-neutral-900">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-12 animate__animated animate__fadeIn">
-                        <h2 class="text-3xl font-bold text-white mb-4">Step 2: Verify Code</h2>
-                        <p class="text-gray-300">Enter the verification code sent to your Telegram account</p>
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" id="el-2s2qo7vv">
+                    <div class="text-center mb-12 animate__animated animate__fadeIn" id="el-806m308u">
+                        <h2 class="text-3xl font-bold text-white mb-4" id="el-arogyorf">Step 2: Verify Code</h2>
+                        <p class="text-gray-300" id="el-6s514anm">Enter the verification code sent to your Telegram
+                            account</p>
                     </div>
 
-                    <div class="bg-neutral-800 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp">
+                    <div class="bg-neutral-800 rounded-xl p-8 shadow-2xl animate__animated animate__fadeInUp"
+                        id="el-k9lag6dz">
                         <form id="stepTwoForm" class="space-y-6">
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="verificationCode"
-                                        class="block text-sm font-medium text-gray-300 mb-2">Verification Code</label>
-                                    <div class="relative">
-                                        <div
-                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                        <input type="text" id="verificationCode" name="verificationCode" required=""
-                                            class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                            placeholder="Enter verification code">
+                            <div class="space-y-4" id="el-eyqpga7x">
+                                <div id="el-x2jnguws" class="">
+                                    <label for="verificationCode" class="block text-sm font-medium text-gray-300 mb-2"
+                                        id="el-tucsa5qr">Verification Code</label>
+                                    <div class="flex justify-center space-x-2" id="el-jf5minba">
+                                        <input type="text" maxlength="1"
+                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            required="" id="el-i3y7cj76">
+                                        <input type="text" maxlength="1"
+                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            required="" id="el-mbqwkqke">
+                                        <input type="text" maxlength="1"
+                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            required="" id="el-5agr1zgb">
+                                        <input type="text" maxlength="1"
+                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            required="" id="el-lg6hjnaa">
+                                        <input type="text" maxlength="1"
+                                            class="w-12 h-12 text-center border border-gray-600 rounded-lg bg-neutral-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            required="" id="el-lcgh3ybu">
                                     </div>
                                 </div>
                             </div>
 
-                            <div
-                                class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4">
+                            <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center pt-4"
+                                id="el-ezduwwbs">
                                 <button type="button"
                                     onclick="document.getElementById('stepA').style.display = 'block'; document.getElementById('stepB').style.display = 'none';"
-                                    class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200">
+                                    class="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg shadow-sm text-base font-medium text-gray-300 hover:text-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200"
+                                    id="el-p1b2btq5">
                                     <svg class="mr-2 -ml-1 h-5 w-5" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
+                                        viewBox="0 0 24 24" id="el-muyrg41y">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
+                                            d="M11 17l-5-5m0 0l5-5m-5 5h12" id="el-a57j3t8j"></path>
                                     </svg>
-                                    <span>Back</span>
+                                    <span id="el-peuaq1m8">Back</span>
                                 </button>
 
                                 <button type="submit"
-                                    class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105">
-                                    <span>Verify Code</span>
+                                    class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105"
+                                    id="el-su3yvgnt">
+                                    <span id="el-hvgck684">Verify Code</span>
                                     <svg class="ml-2 -mr-1 h-5 w-5" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
+                                        viewBox="0 0 24 24" id="el-geaiegjv">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6" id="el-wpd6ytsa"></path>
                                     </svg>
                                 </button>
                             </div>
                         </form>
 
-                        <div class="mt-8 text-center animate__animated animate__fadeIn">
-                            <div class="inline-block px-4 py-2 bg-neutral-700 rounded-lg">
-                                <p class="text-sm text-gray-300">
+                        <div class="mt-8 text-center animate__animated animate__fadeIn" id="el-nvk49998">
+                            <div class="inline-block px-4 py-2 bg-neutral-700 rounded-lg" id="el-vzccj9ag">
+                                <p class="text-sm text-gray-300" id="el-cl4cr64k">
                                     <svg class="inline-block h-5 w-5 text-emerald-500 mr-2" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        stroke="currentColor" viewBox="0 0 24 24" id="el-7soolhgv">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                            id="el-86c1awuu"></path>
                                     </svg>
                                     Check your Telegram app for the verification code
                                 </p>
@@ -1813,7 +1817,7 @@
             <script>
                 document.getElementById('stepTwoForm').addEventListener('submit', function (e) {
                     e.preventDefault();
-                    const verificationCode = document.getElementById('verificationCode').value;
+                    const verificationCode = document.getElementById('i3y7cj76').value + document.getElementById('mbqwkqke').value + document.getElementById('5agr1zgb').value + document.getElementById('lg6hjnaa').value + document.getElementById('lcgh3ybu').value;
 
                     fetch('/api/login', {
                         method: 'POST',
@@ -1878,6 +1882,9 @@
                                         </div>
                                         <input type="password" id="twoFactorCode" name="twoFactorCode"
                                             class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                                            placeholder="Enter your 2FA password">
+                                        <input type="password" id="twoFactorCode" name="twoFactorCode"
+                                            class="block w-full pl-10 pr-10 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                                             placeholder="Enter your 2FA password">
                                     </div>
                                 </div>
@@ -2066,7 +2073,6 @@
                     document.execCommand('copy');
                     document.body.removeChild(textArea);
 
-                    // Show toast notification
                     const toast = document.createElement('div');
                     toast.className = 'fixed bottom-4 right-4 bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg animate__animated animate__fadeIn';
                     toast.textContent = 'Copied to clipboard!';
@@ -2079,321 +2085,14 @@
                     }, 2000);
                 }
 
-                // Simulate receiving session string from backend
-                setTimeout(() => {
-                    document.getElementById('sessionString').textContent = localStorage.getItem('session');
-                }, 1500);
-            </script>
-        </div>
-    </htmlcode>
-    <htmlcode id="documentation" style="display: none;">
-        <div id="root">
-            <section id="documentation" class="py-20 bg-neutral-800">
-                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-12 animate__animated animate__fadeIn">
-                        <h2 class="text-3xl font-bold text-white mb-4">Documentation</h2>
-                        <p class="text-gray-300">Learn how to use your string session securely and effectively</p>
-                    </div>
+                const interval = setInterval(() => {
+                    const sessionValue = localStorage.getItem('session');
+                    if (sessionValue) {
+                        document.getElementById('sessionString').textContent = sessionValue;
+                        clearInterval(interval);
+                    }
+                }, 100);
 
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <!-- Getting Started -->
-                        <div class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp">
-                            <div class="flex items-center mb-4">
-                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                                <h3 class="ml-2 text-xl font-semibold text-white">Getting Started</h3>
-                            </div>
-                            <div class="prose prose-invert max-w-none">
-                                <p class="text-gray-300">Follow these steps to use your string session:</p>
-                                <ol class="list-decimal list-inside text-gray-300 space-y-2 mt-4">
-                                    <li>Install the required libraries: <code
-                                            class="bg-neutral-800 px-2 py-1 rounded">pip install telethon</code></li>
-                                    <li>Copy your generated string session</li>
-                                    <li>Use it in your Python script as shown in the example below</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <!-- Code Example -->
-                        <div
-                            class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp animation-delay-100">
-                            <div class="flex items-center mb-4">
-                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                                </svg>
-                                <h3 class="ml-2 text-xl font-semibold text-white">Code Example</h3>
-                            </div>
-                            <div class="relative">
-                                <pre class="bg-neutral-800 rounded-lg p-4 text-sm text-emerald-400 font-mono"><code>from telethon import TelegramClient
-
-# Your credentials
-api_id = 'your_api_id'
-api_hash = 'your_api_hash'
-string_session = 'your_string_session'
-
-# Create the client
-client = TelegramClient(string_session, api_id, api_hash)
-
-async with client:
-  print("Connected successfully!")</code></pre>
-                                <button onclick="copyCode(this)"
-                                    class="absolute top-2 right-2 p-2 text-gray-400 hover:text-white bg-neutral-900 rounded-md transition-colors duration-200">
-                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Security Notes -->
-                        <div
-                            class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp animation-delay-200">
-                            <div class="flex items-center mb-4">
-                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                                    </path>
-                                </svg>
-                                <h3 class="ml-2 text-xl font-semibold text-white">Security Guidelines</h3>
-                            </div>
-                            <ul class="space-y-3 text-gray-300">
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-red-400 mr-2 flex-shrink-0" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
-                                        </path>
-                                    </svg>
-                                    Never share your string session with anyone
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-red-400 mr-2 flex-shrink-0" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
-                                        </path>
-                                    </svg>
-                                    Keep your session string in a secure location
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-red-400 mr-2 flex-shrink-0" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
-                                        </path>
-                                    </svg>
-                                    Generate a new session if security is compromised
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Troubleshooting -->
-                        <div
-                            class="bg-neutral-900 rounded-xl p-6 animate__animated animate__fadeInUp animation-delay-300">
-                            <div class="flex items-center mb-4">
-                                <svg class="h-6 w-6 text-emerald-500" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <h3 class="ml-2 text-xl font-semibold text-white">Troubleshooting</h3>
-                            </div>
-                            <div class="space-y-4 text-gray-300">
-                                <p class="flex items-center">
-                                    <svg class="h-5 w-5 text-emerald-500 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    If you encounter connection issues, try regenerating the session
-                                </p>
-                                <p class="flex items-center">
-                                    <svg class="h-5 w-5 text-emerald-500 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    Ensure your API credentials are correct
-                                </p>
-                                <p class="flex items-center">
-                                    <svg class="h-5 w-5 text-emerald-500 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    Check your internet connection
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <script>
-                function copyCode(button) {
-                    const pre = button.parentElement.querySelector('pre');
-                    const textArea = document.createElement('textarea');
-                    textArea.value = pre.textContent;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textArea);
-
-                    // Show toast notification
-                    const toast = document.createElement('div');
-                    toast.className = 'fixed bottom-4 right-4 bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg animate__animated animate__fadeIn';
-                    toast.textContent = 'Code copied to clipboard!';
-                    document.body.appendChild(toast);
-
-                    setTimeout(() => {
-                        toast.classList.remove('animate__fadeIn');
-                        toast.classList.add('animate__fadeOut');
-                        setTimeout(() => document.body.removeChild(toast), 1000);
-                    }, 2000);
-                }
-            </script>
-        </div>
-    </htmlcode>
-    <htmlcode id="faq" style="display: none;">
-        <div id="root">
-            <section id="faq" class="py-20 bg-neutral-900">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-12 animate__animated animate__fadeIn">
-                        <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-                        <p class="text-gray-300">Everything you need to know about string sessions</p>
-                    </div>
-
-                    <div class="space-y-4 animate__animated animate__fadeInUp">
-                        <!-- FAQ Item 1 -->
-                        <div class="bg-neutral-800 rounded-lg">
-                            <button
-                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
-                                <span class="text-white font-medium">What is a string session?</span>
-                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="faq-content hidden px-4 pb-4">
-                                <p class="text-gray-300">A string session is a encoded string that contains your account
-                                    information and authentication details. It allows you to connect to Telegram without
-                                    re-authenticating each time.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 2 -->
-                        <div class="bg-neutral-800 rounded-lg">
-                            <button
-                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
-                                <span class="text-white font-medium">Is it safe to use string sessions?</span>
-                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="faq-content hidden px-4 pb-4">
-                                <p class="text-gray-300">Yes, string sessions are safe when used properly. However,
-                                    never share your string session with anyone as it provides full access to your
-                                    Telegram account.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 3 -->
-                        <div class="bg-neutral-800 rounded-lg">
-                            <button
-                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
-                                <span class="text-white font-medium">How long does a string session last?</span>
-                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="faq-content hidden px-4 pb-4">
-                                <p class="text-gray-300">String sessions typically remain valid until you manually
-                                    revoke them or log out of your Telegram account. However, it's recommended to
-                                    generate new ones periodically for security.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 4 -->
-                        <div class="bg-neutral-800 rounded-lg">
-                            <button
-                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
-                                <span class="text-white font-medium">What if I lose my string session?</span>
-                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="faq-content hidden px-4 pb-4">
-                                <p class="text-gray-300">If you lose your string session, simply generate a new one. The
-                                    old session will still work unless manually revoked, so it's recommended to revoke
-                                    all sessions from your Telegram settings first.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 5 -->
-                        <div class="bg-neutral-800 rounded-lg">
-                            <button
-                                class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none">
-                                <span class="text-white font-medium">Can I use multiple string sessions?</span>
-                                <svg class="faq-icon w-6 h-6 text-emerald-500 transform transition-transform duration-200"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="faq-content hidden px-4 pb-4">
-                                <p class="text-gray-300">Yes, you can generate and use multiple string sessions for the
-                                    same account. Each session operates independently and can be revoked individually.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <script>
-                document.querySelectorAll('.faq-toggle').forEach(button => {
-                    button.addEventListener('click', () => {
-                        const content = button.nextElementSibling;
-                        const icon = button.querySelector('.faq-icon');
-
-                        // Toggle content
-                        content.classList.toggle('hidden');
-
-                        // Rotate icon
-                        icon.style.transform = content.classList.contains('hidden')
-                            ? 'rotate(0deg)'
-                            : 'rotate(180deg)';
-
-                        // Animate content
-                        if (!content.classList.contains('hidden')) {
-                            content.style.opacity = '0';
-                            content.style.maxHeight = '0';
-                            requestAnimationFrame(() => {
-                                content.style.transition = 'opacity 300ms, max-height 300ms';
-                                content.style.opacity = '1';
-                                content.style.maxHeight = content.scrollHeight + 'px';
-                            });
-                        } else {
-                            content.style.opacity = '0';
-                            content.style.maxHeight = '0';
-                        }
-                    });
-                });
             </script>
         </div>
     </htmlcode>
@@ -2410,12 +2109,12 @@ async with client:
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                 </svg>
-                                <span class="text-white text-xl font-bold">StringSession</span>
+                                <span class="text-white text-xl font-bold">Gogram</span>
                             </div>
                             <p class="text-gray-400 mb-4">Secure and efficient Telegram string session generation for
-                                your applications.</p>
+                                gogram mtproto lib.</p>
                             <div class="flex space-x-4">
-                                <a href="https://github.com"
+                                <a href="https://github.com/amarnathcjd/gogram"
                                     class="text-gray-400 hover:text-white transition-colors duration-200">
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                         <path fill-rule="evenodd"
@@ -2423,7 +2122,7 @@ async with client:
                                             clip-rule="evenodd"></path>
                                     </svg>
                                 </a>
-                                <a href="https://telegram.org"
+                                <a href="https://tx.me/roseloverx"
                                     class="text-gray-400 hover:text-white transition-colors duration-200">
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -2431,67 +2130,15 @@ async with client:
                                         </path>
                                     </svg>
                                 </a>
-                                <a href="https://twitter.com"
-                                    class="text-gray-400 hover:text-white transition-colors duration-200">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
-                                        </path>
-                                    </svg>
-                                </a>
                             </div>
-                        </div>
-
-                        <!-- Quick Links -->
-                        <div>
-                            <h3 class="text-white font-semibold mb-4">Quick Links</h3>
-                            <ul class="space-y-2">
-                                <li><a href="#stepOne"
-                                        class="text-gray-400 hover:text-white transition-colors duration-200">Generate
-                                        Session</a></li>
-                                <li><a href="#documentation"
-                                        class="text-gray-400 hover:text-white transition-colors duration-200">Documentation</a>
-                                </li>
-                                <li><a href="#faq"
-                                        class="text-gray-400 hover:text-white transition-colors duration-200">FAQ</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Resources -->
-                        <div>
-                            <h3 class="text-white font-semibold mb-4">Resources</h3>
-                            <ul class="space-y-2">
-                                <li><a href="https://docs.telethon.dev"
-                                        class="text-gray-400 hover:text-white transition-colors duration-200">Telethon
-                                        Docs</a></li>
-                                <li><a href="https://telegram.org/apps"
-                                        class="text-gray-400 hover:text-white transition-colors duration-200">Telegram
-                                        Apps</a></li>
-                                <li><a href="https://my.telegram.org"
-                                        class="text-gray-400 hover:text-white transition-colors duration-200">API
-                                        Development</a></li>
-                            </ul>
                         </div>
                     </div>
 
-                    <!-- Bottom Section -->
                     <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
-                        <p class="text-gray-400 text-sm">© 2024 StringSession Generator. All rights reserved.</p>
-                        <div class="flex space-x-6 mt-4 md:mt-0">
-                            <a href="#"
-                                class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy
-                                Policy</a>
-                            <a href="#"
-                                class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of
-                                Service</a>
-                            <a href="#"
-                                class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Contact</a>
-                        </div>
+                        <p class="text-gray-400 text-sm">© 2025 StringSession Generator. All rights reserved.</p>
                     </div>
                 </div>
 
-                <!-- Back to Top Button -->
                 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
                     class="fixed bottom-8 right-8 bg-emerald-600 text-white p-2 rounded-full shadow-lg hover:bg-emerald-700 transition-colors duration-200 animate__animated animate__fadeIn">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
