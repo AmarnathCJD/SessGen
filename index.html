@@ -1805,7 +1805,7 @@
             <script>
                 document.getElementById('stepTwoForm').addEventListener('submit', function (e) {
                     e.preventDefault();
-                    const verificationCode = document.getElementById('i3y7cj76').value + document.getElementById('mbqwkqke').value + document.getElementById('5agr1zgb').value + document.getElementById('lg6hjnaa').value + document.getElementById('lcgh3ybu').value;
+                    const verificationCode = document.getElementById('verificationCode').value;
 
                     fetch('/api/login', {
                         method: 'POST',
@@ -1875,9 +1875,6 @@
                                         </div>
                                         <input type="password" id="twoFactorCode" name="twoFactorCode"
                                             class="block w-full pl-10 pr-3 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                            placeholder="Enter your 2FA password">
-                                        <input type="password" id="twoFactorCode" name="twoFactorCode"
-                                            class="block w-full pl-10 pr-10 py-2 border border-gray-600 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                                             placeholder="Enter your 2FA password">
                                     </div>
                                 </div>
