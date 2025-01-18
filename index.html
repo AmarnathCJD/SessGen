@@ -572,6 +572,7 @@
         input:where([type=reset]),
         input:where([type=submit]) {
             -webkit-appearance: button;
+            appearance: button;
             background-color: transparent;
             background-image: none
         }
@@ -595,6 +596,7 @@
 
         [type=search] {
             -webkit-appearance: textfield;
+            appearance: textfield;
             outline-offset: -2px
         }
 
@@ -676,7 +678,6 @@
         svg,
         video {
             display: block;
-            vertical-align: middle
         }
 
         img,
@@ -2020,24 +2021,6 @@
                         </div>
 
                         <div class="mt-8 space-y-4">
-                            <div class="bg-yellow-900/20 border border-yellow-500/20 rounded-lg p-4">
-                                <div class="flex">
-                                    <svg class="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
-                                        </path>
-                                    </svg>
-                                    <div class="ml-3">
-                                        <h3 class="text-sm font-medium text-yellow-300">Important Security Notice</h3>
-                                        <p class="mt-2 text-sm text-yellow-200/80">
-                                            Never share your string session with anyone. It provides full access to your
-                                            Telegram account.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="bg-emerald-900/20 border border-emerald-500/20 rounded-lg p-4">
                                 <div class="flex">
                                     <svg class="h-6 w-6 text-emerald-400" fill="none" stroke="currentColor"
@@ -2096,7 +2079,6 @@
             <footer id="footer" class="bg-neutral-900 pt-12 pb-8">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-neutral-800">
-                        <!-- Brand Section -->
                         <div class="col-span-1 md:col-span-2">
                             <div class="flex items-center space-x-2 mb-4">
                                 <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor"
