@@ -1584,6 +1584,27 @@
                 background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
             }
         }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1f2937;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0.7;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate__fadeIn {
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
     </style>
 </head>
 
@@ -1594,15 +1615,12 @@
     </a>
     <htmlcode id="stepA">
         <div id="root">
-            <section id="stepOne" class="py-20 bg-neutral-800 animate__animated animate__fadeIn">
+            <section id="stepOne" class="py-20 bg-neutral-800 animate__animated animate__fadeIn bg-[radial-gradient(circle_at_30%_30%,rgba(16,185,129,0.1),transparent_70%)]">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
-                        <div class="absolute inset-0">
-                            <div
-                                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_70%)]">
-                            </div>
-                        </div>
-                        <h2 class="text-3xl font-bold text-white mb-4">Gogram Session Generator</h2>
+                        <h2 class="text-3xl font-bold text-white mb-4 flex items-center justify-center"><img
+                                src="https://envs.sh/tsy.png" alt="Gogram Logo" class="h-24 w-auto inline-block">
+                            Gogram Session Generator</h2>
                         <p class="text-gray-300">Enter your Telegram API credentials to begin the session generation
                             process</p>
                     </div>
@@ -1670,7 +1688,15 @@
                                 </div>
                             </div>
 
-                            <div class="flex justify-center pt-4">
+                            <div class="flex justify-center pt-4 space-x-4">
+                                <button type="button" id="prefillButton"
+                                    class="inline-flex items-center px-4 py-2 border border-gray-600 rounded-lg shadow-sm text-sm font-medium text-gray-300 bg-neutral-800 hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105">
+                                    <span>Prefill</span>
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m7-7v14"></path>
+                                    </svg>
+                                </button>
                                 <button type="submit"
                                     class="inline-flex items-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105">
                                     <span>Continue to Next Step</span>
@@ -1684,11 +1710,11 @@
                         </form>
                     </div>
 
-                    <div class="mt-8 text-center text-sm text-gray-400">
+                    <div class="mt-8 text-center text-sm text-gray-400 relative z-99">
                         <p>Need help finding your API credentials?
                             <a href="https://my.telegram.org/apps" target="_blank" rel="noopener noreferrer"
-                                class="text-emerald-400 hover:text-emerald-300">
-                                Visit Telegram's API Development Tools
+                                class="text-emerald-400 hover:text-emerald-300 ">
+                                &nbsp;Visit Telegram's API Development Tools
                             </a>
                         </p>
                     </div>
@@ -1696,6 +1722,10 @@
             </section>
 
             <script>
+                document.getElementById('prefillButton').addEventListener('click', function () {
+                    document.getElementById('appId').value = '123456';
+                    document.getElementById('appHash').value = 'abcdef1234567890abcdef1234567890';
+                });
                 document.getElementById('stepOneForm').addEventListener('submit', function (e) {
                     e.preventDefault();
                     const formData = {
@@ -1727,7 +1757,7 @@
     </htmlcode>
     <htmlcode id="stepB" style="display: none;">
         <div id="root">
-            <section id="stepTwo" class="py-20 bg-neutral-900">
+            <section id="stepTwo" class="py-20 bg-neutral-900 bg-[radial-gradient(circle_at_30%_30%,rgba(245,158,11,0.1),transparent_70%)]">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
                         <div class="absolute inset-0">
@@ -1846,7 +1876,7 @@
     </htmlcode>
     <htmlcode id="stepC" style="display: none;">
         <div id="root">
-            <section id="stepThree" class="py-20 bg-neutral-800">
+            <section id="stepThree" class="py-20 bg-neutral-800 bg-[radial-gradient(circle_at_30%_30%,rgba(99,102,241,0.1),transparent_70%)]">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
                         <div class="absolute inset-0">
@@ -1968,7 +1998,7 @@
     </htmlcode>
     <htmlcode id="stepD" style="display: none;">
         <div id="root">
-            <section id="stepFour" class="py-20 bg-neutral-900">
+            <section id="stepFour" class="py-20 bg-neutral-900 bg-[radial-gradient(circle_at_30%_30%,rgba(236,72,153,0.1),transparent_70%)]">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 animate__animated animate__fadeIn">
                         <div class="absolute inset-0">
